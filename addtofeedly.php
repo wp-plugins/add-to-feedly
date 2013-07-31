@@ -11,7 +11,7 @@ Author URI: http://www.davidmerinas.com
 define(ADD_TO_FEEDLY_WIDGET_ID, "widget_ADD_TO_FEEDLY");
 
 function ADD_TO_FEEDLY_showimage($feeds='http://feeds.feedburner.com/davidmerinas',$lang="es"){
-		$path=get_bloginfo('url')."/wp-content/plugins/addtofeedly/";
+		$path=get_bloginfo('url')."/wp-content/plugins/add-to-feedly/";
 		$url="http://cloud.feedly.com/#subscription%2Ffeed%2F".urlencode($feeds);
 		echo('<a id="addtofeedly" href="'.$url.'" title="'.__("Follow on Feedly").'"><img src="'.$path.'images/addtofeedly_'.$lang.'.png" alt="'.__("Follow on Feedly").'"/></a>');
 }
