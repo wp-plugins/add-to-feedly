@@ -3,7 +3,7 @@ Contributors: davidmerinas
 Donate link: http://957.be/donatedavidmerinas
 Tags: feedly,rss,feed,widget
 Requires at least: 3.3
-Tested up to: 3.5.1
+Tested up to: 3.5.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,7 @@ Not yet
 
 == Screenshots ==
 1. screenshot-1.png
+2. screenshot-2.png
 
 
 == Changelog ==
