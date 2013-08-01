@@ -2,9 +2,9 @@
 /*
 Plugin Name: Add to feedly
 Plugin URI: http://wordpress.org/plugins/add-to-feedly/
-Description: This plugin provides a widget to Display a beautiful "Follow on Feedly" banner which will make easier for users adding RSS feed url to Feedly reader. English and Spanish. Este plugin habilita un widget que muestra un banner "Sigueme en Feedly" que hara mas facil para los usuarios agregar la url de las feeds RSS al lector Feedly. Ingles y Castellano.
-Version: 1.0
-Author: David Merinas
+Description: Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" that this plugin provides. You can show the banner in English or Spanish. Los usuarios de Feedly pueden suscribirse facilmente a tus RSS con tan solo hacer clic sobre el banner "Sigueme en Feedly" que proporciona este plugin. El banner esta disponible en Ingles y Español. 
+Version: 1.0.1
+Author: davidmerinas
 Author URI: http://www.davidmerinas.com
 */
 
