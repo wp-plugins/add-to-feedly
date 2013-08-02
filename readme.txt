@@ -13,7 +13,7 @@ This plugin provides a widget to Display a "Follow on Feedly" banner in your sid
 == Description ==
 
 Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" that this plugin provides. You can show the banner in English or Spanish.
-Los usuarios de Feedly pueden suscribirse facilmente a tus RSS con tan solo hacer clic sobre el banner "Sigueme en Feedly" que proporciona este plugin. El banner esta disponible en Ingles y Español. 
+Los usuarios de Feedly pueden suscribirse facilmente a tus RSS con tan solo hacer clic sobre el banner "Sigueme en Feedly" que proporciona este plugin. El banner esta disponible en Ingles y Espanol. 
 
 == Installation ==
 
