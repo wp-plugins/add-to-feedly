@@ -36,7 +36,7 @@ Not yet
 == Screenshots ==
 1. screenshot-button.png
 2. screenshot-1.png
-2. screenshot-2.png
+3. screenshot-2.png
 
 
 == Changelog ==
