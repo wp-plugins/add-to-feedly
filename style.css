@@ -1,2 +1,11 @@
+#widget_add_to_feedly{width:100%!important;clear:both!important;display:table!important;}
 #addtofeedly{width:100%;text-align:center;clear:both;height:auto;}
 #addtofeedly img{width:100%;border-radius:5px;max-width:320px;}
+
+#float_feed_box{position:fixed;bottom:10px;right:10px;z-index:20;opacity:0.6;filter:alpha(opacity=60);}
+#float_feed_box:hover{opacity:1;filter:alpha(opacity=100);}
+#float_feed_box.left{left:10px!important;}
+#float_feed_box img{width:100%;}
+#float_feed_box.floatfeed_big{width:140px;}
+#float_feed_box.floatfeed_medium{width:100px;}
+#float_feed_box.floatfeed_small{width:40px;}
