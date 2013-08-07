@@ -39,6 +39,8 @@ Not yet
 
 
 == Changelog ==
+= 1.1.1 =
+*Fixed some errors related with problems rendering feeds.
 
 = 1.1 =
 *Fixed some errors, added translations and a new feature: floating "add to Feedly" button.
