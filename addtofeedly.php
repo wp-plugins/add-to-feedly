@@ -85,7 +85,7 @@ function ADD_TO_FEEDLY_settings_page() {
 function ADD_TO_FEEDLY_showimage($feeds='http://feeds.feedburner.com/davidmerinas',$lang="es"){
 		$path=get_bloginfo('url')."/wp-content/plugins/".basename( dirname( __FILE__ ) )."/";
 		$url="http://cloud.feedly.com/#subscription%2Ffeed%2F".urlencode($feeds);
-		echo('<a id="addtofeedly" href="'.$url.'" title="'.__("Follow on","addtofeedly").' Feedly" target="__blank"><img src="'.$path.'images/addtofeedly_'.$lang.'.png" alt="'.__("Follow on","addtofeedly").' Feedly"/></a>');
+		echo('<a id="addtofeedly" href="'.$url.'" title="'.__("Follow on","addtofeedly").' Feedly" target="_blank"><img src="'.$path.'images/addtofeedly_'.$lang.'.png" alt="'.__("Follow on","addtofeedly").' Feedly"/></a>');
 }
 
 function widget_ADD_TO_FEEDLY_control() {
@@ -162,7 +162,7 @@ function ADD_TO_FEEDLY_init(){
 	if(get_option('ADD_TO_FEEDLY_active'))
 	{
 		$path=get_bloginfo('url')."/wp-content/plugins/".basename( dirname( __FILE__ ) )."/";
-		echo('<div id="float_feed_box" class="'.get_option('ADD_TO_FEEDLY_position').' floatfeed_'.get_option('ADD_TO_FEEDLY_size').'"><a href="http://cloud.feedly.com/#subscription%2Ffeed%2F'.urlencode(get_option('ADD_TO_FEEDLY_feed_url')).'" title="'.__('Follow on','addtofeedly').' Feedly" target="__blank"><img src="'.$path.'/images/feedly-follow-'.get_option('ADD_TO_FEEDLY_size').'.png" alt="'.__('Follow on','addtofeedly').' Feedly"/></a></div>');
+		echo('<div id="float_feed_box" class="'.get_option('ADD_TO_FEEDLY_position').' floatfeed_'.get_option('ADD_TO_FEEDLY_size').'"><a href="http://cloud.feedly.com/#subscription%2Ffeed%2F'.urlencode(get_option('ADD_TO_FEEDLY_feed_url')).'" title="'.__('Follow on','addtofeedly').' Feedly" target="_blank"><img src="'.$path.'/images/feedly-follow-'.get_option('ADD_TO_FEEDLY_size').'.png" alt="'.__('Follow on','addtofeedly').' Feedly"/></a></div>');
 	}
 }
 
