@@ -175,7 +175,7 @@ if ( is_admin() ){
 	add_filter("plugin_action_links_$plugin", 'addtofeedly_settings_link' );
 }
 add_action("plugins_loaded", "widget_ADD_TO_FEEDLY_init");
-if ( !is_admin() ){
-	add_action("plugins_loaded", "ADD_TO_FEEDLY_init");
+if ( !is_admin() &&!is_feed()){
+	add_action("wp_footer", "ADD_TO_FEEDLY_init");
 }
 ?>
