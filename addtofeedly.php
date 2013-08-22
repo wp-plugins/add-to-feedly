@@ -125,7 +125,7 @@ function widget_ADD_TO_FEEDLY_control() {
 	    id="<?php echo ADD_TO_FEEDLY_WIDGET_ID; ?>-lang">
 		<option value="en" <?php echo($ADD_TO_FEEDLY_lang=="en"?'selected="selected"':'');?>>English</option>
 		<option value="es" <?php echo($ADD_TO_FEEDLY_lang=="es"?'selected="selected"':'');?>>Espa&ntilde;ol</option>
-		<option value="fr" <?php echo($ADD_TO_FEEDLY_lang=="fr"?'selected="selected"':'');?>Fran&ccedil;ais</option>
+		<option value="fr" <?php echo($ADD_TO_FEEDLY_lang=="fr"?'selected="selected"':'');?>>Fran&ccedil;ais</option>
 	    </select>
 	</p>
 	<input type="hidden"
