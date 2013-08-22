@@ -2,8 +2,8 @@
 /*
 Plugin Name: Add to feedly
 Plugin URI: http://wordpress.org/plugins/add-to-feedly/
-Description: Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. You can show the banner in English or Spanish. Los usuarios de Feedly pueden suscribirse facilmente a tus RSS con tan solo hacer clic sobre el banner "Sigueme en Feedly" o en el boton flotante que proporciona este plugin. El banner esta disponible en Ingles y Espanol. 
-Version: 1.1.1
+Description: Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. Banner available in English, French or Spanish. 
+Version: 1.2
 Author: davidmerinas
 Author URI: http://www.davidmerinas.com
 */
@@ -125,6 +125,7 @@ function widget_ADD_TO_FEEDLY_control() {
 	    id="<?php echo ADD_TO_FEEDLY_WIDGET_ID; ?>-lang">
 		<option value="en" <?php echo($ADD_TO_FEEDLY_lang=="en"?'selected="selected"':'');?>>English</option>
 		<option value="es" <?php echo($ADD_TO_FEEDLY_lang=="es"?'selected="selected"':'');?>>Espa&ntilde;ol</option>
+		<option value="fr" <?php echo($ADD_TO_FEEDLY_lang=="fr"?'selected="selected"':'');?>Fran&ccedil;ais</option>
 	    </select>
 	</p>
 	<input type="hidden"
