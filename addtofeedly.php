@@ -3,7 +3,7 @@
 Plugin Name: Add to feedly
 Plugin URI: http://wordpress.org/plugins/add-to-feedly/
 Description: Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. Banner available in English, French or Spanish. 
-Version: 1.2
+Version: 1.2.1
 Author: davidmerinas
 Author URI: http://www.davidmerinas.com
 */
@@ -23,6 +23,7 @@ function ADD_TO_FEEDLY_register_mysettings() {
 	//register our settings
 	register_setting( 'ADD_TO_FEEDLY-settings-group', 'ADD_TO_FEEDLY_active' );
 	register_setting( 'ADD_TO_FEEDLY-settings-group', 'ADD_TO_FEEDLY_feed_url' );
+	register_setting( 'ADD_TO_FEEDLY-settings-group', 'ADD_TO_FEEDLY_customtext' );
 	register_setting( 'ADD_TO_FEEDLY-settings-group', 'ADD_TO_FEEDLY_position' );
 	register_setting( 'ADD_TO_FEEDLY-settings-group', 'ADD_TO_FEEDLY_size' );
 }
@@ -82,10 +83,18 @@ function ADD_TO_FEEDLY_settings_page() {
 </div>
 <?}
 
-function ADD_TO_FEEDLY_showimage($feeds='http://feeds.feedburner.com/davidmerinas',$lang="es"){
+function ADD_TO_FEEDLY_showimage($feeds='http://feeds.feedburner.com/davidmerinas',$lang="es",$custom=""){
 		$path=get_bloginfo('url')."/wp-content/plugins/".basename( dirname( __FILE__ ) )."/";
 		$url="http://cloud.feedly.com/#subscription%2Ffeed%2F".urlencode($feeds);
-		echo('<a id="addtofeedly" href="'.$url.'" title="'.__("Follow on","addtofeedly").' Feedly" target="_blank"><img src="'.$path.'images/addtofeedly_'.$lang.'.png" alt="'.__("Follow on","addtofeedly").' Feedly"/></a>');
+		if($custom!="")
+		{
+			echo('<a  href="'.$url.'" title="'.$custom.' Feedly" target="_blank"><div  id="addtofeedly"><img src="'.$path.'images/addtofeedly_master.png" alt="'.$custom.' Feedly"/><p class="customtext">'.$custom.'</p></div></a>');
+		}
+		else
+		{
+			$image='addtofeedly_'.$lang;
+			echo('<a id="addtofeedly" href="'.$url.'" title="'.__("Follow on","addtofeedly").' Feedly" target="_blank"><img src="'.$path.'images/'.$image.'.png" alt="'.__("Follow on","addtofeedly").' Feedly"/></a>');
+		}
 }
 
 function widget_ADD_TO_FEEDLY_control() {
@@ -97,11 +106,13 @@ function widget_ADD_TO_FEEDLY_control() {
 	if ($widget_data['submit']) {
 		$options['ADD_TO_FEEDLY_feedurl'] = $widget_data['ADD_TO_FEEDLY_feedurl'];
 		$options['ADD_TO_FEEDLY_lang'] = $widget_data['ADD_TO_FEEDLY_lang'];
+		$options['ADD_TO_FEEDLY_customtext'] = $widget_data['ADD_TO_FEEDLY_customtext'];
 		update_option(ADD_TO_FEEDLY_WIDGET_ID, $options);
 	}
 	// Datos para el formulario
 	$ADD_TO_FEEDLY_feedurl = $options['ADD_TO_FEEDLY_feedurl'];
 	$ADD_TO_FEEDLY_lang = $options['ADD_TO_FEEDLY_lang'];
+	$ADD_TO_FEEDLY_customtext = $options['ADD_TO_FEEDLY_customtext'];
 	
 	// Codigo HTML del formulario	
 	?>
@@ -128,6 +139,19 @@ function widget_ADD_TO_FEEDLY_control() {
 		<option value="fr" <?php echo($ADD_TO_FEEDLY_lang=="fr"?'selected="selected"':'');?>>Fran&ccedil;ais</option>
 	    </select>
 	</p>
+	<p> 
+		 <label for="<?php echo ADD_TO_FEEDLY_WIDGET_ID;?>-customtext">
+			<?php _e('Custom text','addtofeedly');?> (<?php _e('Leave blank for default','addtofeedly');?>)
+		  </label>
+		  <input class="widefat"
+			type="text"
+			name="<?php echo ADD_TO_FEEDLY_WIDGET_ID; ?>[ADD_TO_FEEDLY_customtext]"
+			id="<?php echo ADD_TO_FEEDLY_WIDGET_ID; ?>-customtext"
+			value="<?php echo $ADD_TO_FEEDLY_customtext; ?>"/>
+	
+	</p>
+	
+	
 	<input type="hidden"
 	  name="<?php echo ADD_TO_FEEDLY_WIDGET_ID; ?>[submit]"
 	  value="1"/>
@@ -141,8 +165,9 @@ function widget_ADD_TO_FEEDLY($args) {
 	// Query the next scheduled post
 	$ADD_TO_FEEDLY_feedurl = $options["ADD_TO_FEEDLY_feedurl"];
 	$ADD_TO_FEEDLY_lang = $options["ADD_TO_FEEDLY_lang"];
+	$ADD_TO_FEEDLY_customtext = $options["ADD_TO_FEEDLY_customtext"];
 	echo $before_widget;
-	ADD_TO_FEEDLY_showimage($ADD_TO_FEEDLY_feedurl,$ADD_TO_FEEDLY_lang);
+	ADD_TO_FEEDLY_showimage($ADD_TO_FEEDLY_feedurl,$ADD_TO_FEEDLY_lang,$ADD_TO_FEEDLY_customtext);
 	echo $after_widget;
 }
 
@@ -159,6 +184,14 @@ function addtofeedly_stylesheet() {
     wp_enqueue_style( 'addtofeedly-style' );
 }
 
+function addtofeedly_javascript() {
+    // Respects SSL, scripts.js is relative to the current file
+	wp_register_script( 'addtofeedly-jquery-script', plugins_url( '/js/jquery-1.10.2.min.js', __FILE__ ) ); 
+	wp_enqueue_script( 'addtofeedly-jquery-script' ); 	
+	wp_register_script( 'addtofeedly-script', plugins_url( '/js/scripts.js', __FILE__ ) );  
+    wp_enqueue_script( 'addtofeedly-script' ); 
+}
+
 function ADD_TO_FEEDLY_init(){
 	if(get_option('ADD_TO_FEEDLY_active'))
 	{
@@ -170,6 +203,8 @@ function ADD_TO_FEEDLY_init(){
 // Registrar el widget en WordPress
 load_plugin_textdomain('addtofeedly', false, basename( dirname( __FILE__ ) ) . '/languages' );
 add_action('wp_enqueue_scripts', 'addtofeedly_stylesheet');
+add_action('wp_enqueue_scripts', 'addtofeedly_javascript');
+
 if ( is_admin() ){
 	add_action('admin_menu', 'ADD_TO_FEEDLY_create_menu');
 	$plugin = plugin_basename(__FILE__); 

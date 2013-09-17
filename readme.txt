@@ -3,7 +3,7 @@ Contributors: davidmerinas
 Donate link: http://957.be/donatedavidmerinas
 Tags: feedly,rss,feed,widget,derosieres,davidmerinas
 Requires at least: 3.3
-Tested up to: 3.6
+Tested up to: 3.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ This plugin provides a widget to Display a "Follow on Feedly" banner in your sid
 
 == Description ==
 
-Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. You can show the banner in English, French or Spanish. Several sizes available for Floating button.
+Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. You can show the banner in English, French or Spanish or whatever you want using custom text. Several sizes available for Floating button.
 
 == Installation ==
 
@@ -38,6 +38,9 @@ Not yet
 
 
 == Changelog ==
+
+= 1.2.1 =
+*Now it is possible to customize the "Follow on" text in the banner
 
 = 1.2 =
 *French translation added (thanks to @derosieres)

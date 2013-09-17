@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Add to feedly v1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-08-22 21:58+0100\n"
+"PO-Revision-Date: 2013-09-17 20:09+0100\n"
 "Last-Translator: de Rosières <webmaster@derosieres.fr>\n"
 "Language-Team: deRosieres.fr <info@derosieres.fr>\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,12 @@ msgstr ""
 #: addtofeedly.php:48
 msgid "Active"
 msgstr "Actif"
+
+msgid "Custom text"
+msgstr "Texte personnalisé"
+
+msgid "Leave blank for default"
+msgstr "Laisser vide par défaut"
 
 # @ addtofeedly
 #: addtofeedly.php:58
