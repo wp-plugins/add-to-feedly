@@ -3,7 +3,7 @@
 Plugin Name: Add to feedly
 Plugin URI: http://wordpress.org/plugins/add-to-feedly/
 Description: Feedly users can subscribe your RSS feed just by clicking the banner "Follow on Feedly" or the floating button that this plugin provides. Banner available in English, French or Spanish. 
-Version: 1.2.1
+Version: 1.2.2
 Author: davidmerinas
 Author URI: http://www.davidmerinas.com
 */
@@ -59,9 +59,9 @@ function ADD_TO_FEEDLY_settings_page() {
         <th scope="row"><?php _e('Size','addtofeedly');?></th>
         <td>
 			<select style="width:120px" name="ADD_TO_FEEDLY_size">
-				<option value="big" <?=get_option('ADD_TO_FEEDLY_size')=="big"?'selected="selected"':''?>><?php _e('Big','addtofeedly');?></option>
-				<option value="medium" <?=get_option('ADD_TO_FEEDLY_size')=="medium"?'selected="selected"':''?>><?php _e('Medium','addtofeedly');?></option>
-				<option value="small" <?=get_option('ADD_TO_FEEDLY_size')=="small"?'selected="selected"':''?>><?php _e('Small','addtofeedly');?></option>
+				<option value="big" <?php echo(get_option('ADD_TO_FEEDLY_size')=="big"?'selected="selected"':'')?>><?php _e('Big','addtofeedly');?></option>
+				<option value="medium" <?php echo(get_option('ADD_TO_FEEDLY_size')=="medium"?'selected="selected"':'')?>><?php _e('Medium','addtofeedly');?></option>
+				<option value="small" <?php echo(get_option('ADD_TO_FEEDLY_size')=="small"?'selected="selected"':'')?>><?php _e('Small','addtofeedly');?></option>
 			</select>
 		</td>
         </tr>
@@ -70,8 +70,8 @@ function ADD_TO_FEEDLY_settings_page() {
         <th scope="row"><?php _e('Position','addtofeedly');?></th>
         <td>
 			<select style="width:120px" name="ADD_TO_FEEDLY_position">
-				<option value="left" <?=get_option('ADD_TO_FEEDLY_position')=="left"?'selected="selected"':''?>><?php _e('Left','addtofeedly');?></option>
-				<option value="right" <?=get_option('ADD_TO_FEEDLY_position')=="right"?'selected="selected"':''?>><?php _e('Right','addtofeedly');?></option>
+				<option value="left" <?php echo(get_option('ADD_TO_FEEDLY_position')=="left"?'selected="selected"':'')?>><?php _e('Left','addtofeedly');?></option>
+				<option value="right" <?php echo(get_option('ADD_TO_FEEDLY_position')=="right"?'selected="selected"':'')?>><?php _e('Right','addtofeedly');?></option>
 			</select>
 		</td>
         </tr>

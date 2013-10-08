@@ -39,6 +39,10 @@ Not yet
 
 == Changelog ==
 
+= 1.2.2 =
+*Fixed some problems related to shortags in php
+
+
 = 1.2.1 =
 *Now it is possible to customize the "Follow on" text in the banner
 
