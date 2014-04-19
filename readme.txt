@@ -39,6 +39,9 @@ Not yet
 
 == Changelog ==
 
+= 1.2.6 =
+*Fixed some bugs
+
 = 1.2.5 =
 *Fixed some bugs
 
