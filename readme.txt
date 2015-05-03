@@ -3,7 +3,7 @@ Contributors: davidmerinas
 Donate link: http://957.be/donatedavidmerinas
 Tags: feedly,rss,feed,widget,derosieres,davidmerinas
 Requires at least: 3.3
-Tested up to: 4.0
+Tested up to: 4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,6 +38,9 @@ Not yet
 
 
 == Changelog ==
+
+= 1.2.9 =
+*Fixing some troubles related compatibility with several javascript based plugins
 
 = 1.2.8 =
 *Ready for WordPress 4.x
