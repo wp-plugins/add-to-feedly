@@ -39,6 +39,9 @@ Not yet
 
 == Changelog ==
 
+= 1.2.10 =
+*Serbian translation added (thanks to Borisa Djuraskovic from webhostinghub.com )
+
 = 1.2.9 =
 *Fixing some troubles related compatibility with several javascript based plugins
 

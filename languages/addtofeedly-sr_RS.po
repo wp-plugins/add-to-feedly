@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Add to feedly v1.1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-12-17 09:52+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: deRosieres.fr <info@derosieres.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ addtofeedly
+#: addtofeedly.php:48
+msgid "Active"
+msgstr "aktivan"
+
+msgid "Custom text"
+msgstr "Prilagođeni tekst"
+
+msgid "Leave blank for default"
+msgstr "Ostavite prazno za podrazumevano"
+
+# @ addtofeedly
+#: addtofeedly.php:58
+msgid "Size"
+msgstr "Veličina"
+
+# @ addtofeedly
+#: addtofeedly.php:61
+msgid "Big"
+msgstr "Veliki"
+
+# @ addtofeedly
+#: addtofeedly.php:62
+msgid "Medium"
+msgstr "Srednji"
+
+# @ addtofeedly
+#: addtofeedly.php:63
+msgid "Small"
+msgstr "Mali"
+
+# @ addtofeedly
+#: addtofeedly.php:69
+msgid "Position"
+msgstr "Pozicija"
+
+# @ addtofeedly
+#: addtofeedly.php:72
+msgid "Left"
+msgstr "Levo"
+
+# @ addtofeedly
+#: addtofeedly.php:73
+msgid "Right"
+msgstr "Desno"
+
+# @ addtofeedly
+#: addtofeedly.php:88 addtofeedly.php:165
+msgid "Follow on"
+msgstr "Pratiti dalje"
+
+# @ addtofeedly
+#: addtofeedly.php:120
+msgid "Language"
+msgstr "Jezik"
+
+# @ default
+#: addtofeedly.php:150
+msgid "Add to Feedly"
+msgstr "Dodati Feedly"
+
+# @ default
+#: addtofeedly.php:152
+msgid "ADD_TO_FEEDLY"
+msgstr "ADD_TO_FEEDLY"
